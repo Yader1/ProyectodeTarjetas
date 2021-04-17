@@ -14,24 +14,63 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="titulo">AGREGAR TARJETA</h5>
+                    <form>
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="far fa-user"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Titular">
+                        </div>
+                        <div class="input-group input-group-lg mb-3">
+                            <span class="input-group-text">
+                                <i class="fas fa-credit-card"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Numero de tarjeta">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="input-group input-group-lg mb-3">
+                                    <span class="input-group-text">
+                                        <i class="far fa-calendar-alt"></i>
+                                </span>
+                                    <input type="text" class="form-control" placeholder="MM/YY">
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="input-group input-group-lg mb-3">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-key"></i>
+                                </span>
+                                    <input type="password" class="form-control" placeholder="CVV">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button type="submit" class=" btn btn-success btn-lg ">
+                                <i class="fas fa-database"></i>
+                                Aceptar
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <div class="col-lg-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="titulo">LISTADO DE TARJETA</h5>
-                    <table class="table">
+        <div class="col-lg-6 ">
+            <div class="card ">
+                <div class="card-body ">
+                    <h5 class="titulo ">LISTADO DE TARJETA</h5>
+                    <table class="table ">
                         <tbody>
-                            <tr *ngFor="let tarjeta of listTarjetas">
+                            <tr *ngFor="let tarjeta of listTarjetas ">
                                 <td>{{ tarjeta.titulo }}</td>
                                 <td>{{ tarjeta.numeroTarjeta }}</td>
                                 <td>{{ tarjeta.fechaExpiracion}}</td>
                                 <td>
-                                    <i class="far fa-edit text-info"></i>
+                                    <i class="far fa-edit text-info "></i>
                                 </td>
                                 <td>
-                                    <i class="far fa-trash-alt text-danger"></i>
+                                    <i class="far fa-trash-alt text-danger "></i>
                                 </td>
                             </tr>
                         </tbody>
