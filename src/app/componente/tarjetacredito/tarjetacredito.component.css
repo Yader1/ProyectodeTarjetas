@@ -1,3 +1,11 @@
 .far {
     cursor: pointer;
 }
+
+.green-icon {
+    color: #1f8624
+}
+
+.red-icon {
+    color: #fd2d2d
+}
