@@ -71,7 +71,7 @@
                     <h5 class="titulo ">LISTADO DE TARJETA</h5>
                     <table class="table ">
                         <tbody>
-                            <tr *ngFor="let tarjeta of listTarjetas ">
+                            <tr *ngFor="let tarjeta of listTarjetas; let i = index">
                                 <td>{{ tarjeta.titulo }}</td>
                                 <td>{{ tarjeta.numeroTarjeta }}</td>
                                 <td>{{ tarjeta.fechaExpiracion}}</td>
@@ -79,7 +79,7 @@
                                     <i class="far fa-edit text-info "></i>
                                 </td>
                                 <td>
-                                    <i class="far fa-trash-alt text-danger "></i>
+                                    <i (click)="eliminar(i)" class="far fa-trash-alt text-danger "></i>
                                 </td>
                             </tr>
                         </tbody>
